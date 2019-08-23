@@ -7,7 +7,7 @@
 2.查看镜像:
 `docker images`
 
-3.在D盘创建挂载卷目录:
+3.在D盘创建挂载卷目录(Win10 Docker设置确保D盘已勾选为可挂载目录):
 D:\dockerdata\dockeres
 
 4.运行容器(先不挂载目录):
@@ -16,7 +16,7 @@ D:\dockerdata\dockeres
 5.进入容器:
 `docker exec -it myes /bin/bash`
 
-6. 运行ls查看目录:
+6.运行ls查看目录:
 这里我们要将/usr/share/elasticsearch/config配置文件目录和/usr/share/elasticsearch/data数据目录挂载到外部
 
 `exit`退出.
@@ -38,10 +38,10 @@ D:\dockerdata\dockeres
 
 11.浏览器访问http://localhost:9200/出现内容, 表明成功.
 
-12. 修改D:\dockerdata\dockeres\config\elasticserach.yml配置文件:
+12.修改D:\dockerdata\dockeres\config\elasticserach.yml配置文件:
 将 transport.host: 0.0.0.0 前的#去掉后保存文件退出。其作用是允许任何ip地址访问elasticsearch .开发测试阶段可以这么做，生产环境下指定具体的IP。
 
-13. 重启容器:
+13.重启容器:
 `docker restart myes`
 
 
