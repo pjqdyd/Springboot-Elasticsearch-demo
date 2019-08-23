@@ -13,7 +13,9 @@ transport.host: 0.0.0.0
 
 2. 配置项目的application.yml的连接配置.
 
+
 3. 启动项目, 运行测试类中的方法(跟操作Jpa类似, Spring Data就是为了提供数据访问层统一的接口操作方式).
+
 
 
 注意: 推荐使用docker来安装Elasticsearch, 参考[Docker-Elasticsearch.md](Docker-Elasticsearch.md)
