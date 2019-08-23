@@ -22,16 +22,22 @@ D:\dockerdata\dockeres
 `exit`退出.
 
 7.新开一个cmd窗口运行(将配置和数据拷贝到宿主机外部):
+
 `docker cp myes:/usr/share/elasticsearch/config D:\dockerdata\dockeres\`
 
 `docker cp myes:/usr/share/elasticsearch/data D:\dockerdata\dockeres\`
 
 8.结束并删除当前容器:
+
 `docker stop myes`
+
 `docker rm myes`
 
 9.重新启动一个容器(并挂载配置和数据):
-`docker run -dit --name=myes -p 9200:9200 -p 9300:9300 -v D:\dockerdata\dockeres\config\:/usr/share/elasticsearch/config -v D:\dockerdata\dockeres\data\:/usr/share/elasticsearch/data  elasticsearch:latest`
+
+```
+docker run -dit --name=myes -p 9200:9200 -p 9300:9300 -v D:\dockerdata\dockeres\config\:/usr/share/elasticsearch/config -v D:\dockerdata\dockeres\data\:/usr/share/elasticsearch/data  elasticsearch:latest
+```
 
 10.查看容器:
 `docker ps`
